@@ -65,7 +65,7 @@ class Pool:
 
         Args:
             dsn: A string for the data source name to be used to connect to the
-                database. For example: 'dbname=nextdoor user=gisuser'.
+                database. For example: 'dbname=database user=dbuser'.
 
         Optional Args:
             connection_factory: A connection factory to use when creating a new
