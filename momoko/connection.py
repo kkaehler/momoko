@@ -79,8 +79,11 @@ class Pool:
             load_balancing_enabled: Shuffle through connections that are used.
         """
 
-        assert min_pool_size > 0, 'The connection pool size must be a number above 0.'
-        assert max_pool_size >= min_pool_size, 'The maximum connection max pool_size.'
+        assert min_pool_size > 0, ('Invalid connection pool size (%d). Must be a number above 0.' %
+                                   min_pool_size)
+        assert max_pool_size >= min_pool_size, (
+            'The connection max_pool_size (%d) must be >= to the min_pool_size (%d).' %
+            (max_pool_size, min_pool_size))
 
         self.dsn = dsn
         # Initialize size property to match super class.
