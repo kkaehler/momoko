@@ -118,7 +118,8 @@ class Pool:
                     n: An integer for the nth connection created.
                     connection: The connection created.
                 """
-                if n == connections_to_create - 1:
+                last_connection = connections_to_create - 1
+                if n == last_connection:
                     if callback:
                         callback()
 
